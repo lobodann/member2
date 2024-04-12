@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- DOCTYPE宣言といい、HTMLファイルのバージョンを伝えるためのもの -->
+<html lang="ja">
+<!-- 日本語 -->
+
+<head>
+    <!-- headタグ内の中に初期設定（ページを正しく読み込むための情報を定義する）をする -->
+    <meta charset="utf-8">
+    <!-- 文字コードの設定（文字化けを防ぐため） -->
+    <title>lobodan</title>
+    <!-- ページのタイトル -->
+    <meta name="description" content="テキストテキストテキストテキストテキストテキスト">
+    <!-- ページの説明文（webで検索したときに表示される） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 各デバイスに合わせた大きさで表示されるよう設定する -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- ファビコン アイコン -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- リセットCSS（CSSを初期化する） -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSSを読み込む -->
+</head>
+
+<body>
+    <!-- bodyの中にサイトに表示したい内容を書いていく -->
+    <!-- [よく使うタグ]
+    1.一つ一つのセクションをくくるタグ：「section（見出しとテキストor写真など、要素が複数個ある場合）」
+                                「div（１つの写真のみなど要素が１つしかない場合）」
+    2.見出しに使うタグ：「h1」「h2」「h3」「h4」「h5」「h6」と順番に使っていく
+            「h1」が一番文字が大きく表示され、数字が大きくなればなるほど文字が小さくなる
+    3.細かい文章に使うタグ：「p」
+    4.改行に使うタグ：「br」
+    5.画像を表示する際に使うタグ：「img」
+    6.外部ページにリンクしたいときに使うタグ：「a」 
+    7.同じような形に表示させたい内容が２つある時に使うタグ：「dl」「dt」「dd」-->
+
+    <!-- 骨組みの作り方
+        1.「header」「main」「footer」とわける
+        ex.)
+        <header></header>
+        <main></main>
+        <footer></footer>
+        
+        2.「header」の中を「p」「img」「a」等を使って書いていく
+        ex.)
+        <header>
+            <img src="#" alt="~">
+        </header>
+        
+        3.「main」の中を一つ一つのセクション毎に「div」や「section」を使って囲う
+        ex.)
+        <main>
+            <div></div>
+            <section></section>
+            <section></section>
+        </main>
+
+        4.「main」の「div」や「section」中に「h1」「p」「img」「a」「dl.dt.dd」等を使って書く
+        ex.)
+        <main>
+            <div>
+                <img src="#" alt="~">
+            </div>
+            <section>
+                <h1></h1>
+                <p></p>
+            </section>
+            <section>
+                <h2></h2>
+                <p></p>
+                <a href="#">
+                    <img src="#" alt="~">
+                </a>
+            </section>
+        </main>
+
+        5.「footer」の中を「p」「img」「a」等を使って書いていく
+        ex.)
+        <footer>
+            <p></p>
+        </footer> -->
+
+    <!-- ＜クラスの付け方のルール＞
+    ◎このサイトを作っていない第三者が見たときに
+    クラス名を見ただけでどこのことかがわかるような
+    クラス名がベスト！
+    タイトルの名前を英語表記して使うことが多い
+
+    ＜ダメなクラスの付け方＞
+    1.ローマ字表記×⇒必ず英語表記にする
+    ex.)
+    keitai × ⇒mobile 〇
+    
+    2.文頭に数字×⇒数字は文頭以外であればOK
+    ex.)
+    1mobile × ⇒mobile1 OK
+    
+    3.大文字× ⇒小文字で書く
+    ex.)MOBILE × mobile  -->
+
+
+
+
+
+
+
+
+
+    <header>
+        <!-- ページの上部（ロゴやタイトル、各ページへのリンク） -->
+        <div class="container">
+            <a href="#" class="logo"><img src="img/logo.png" alt="ロゴ"></a>
+            <ul>
+                <li><a href="#self_introduction">自己紹介</a></li>
+                <li><a href="#member_introduction"> メンバー紹介</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="mainvisual">
+            <img src="img/mainvisual.jpg" alt="メイン写真">
+            <!-- imgタグ画像を表示させる時に使うタグ-->
+            <!-- src：画像ファイルのパスを入れる
+            alt：不具合で画像が表示されない場合に出す文章、必須ではないが、SEO対策的にも入れることを推奨されている -->
+        </div>
+        <section id="self_introduction">
+            <!-- id=ページ内スクロールで#と紐づいている
+            id="self_introduction"をクリックすると#self_introductionに飛ぶようにリンクしている -->
+            <div class="container">
+                <!-- 「container」：横幅をそろえる時によく使うクラス名 -->
+
+                <h1>自己紹介</h1>
+                <div class="self_photo_text">
+                    <img src="img/member1.png" alt="自分の写真">
+                    <dl>
+                        <dt>氏名</dt>
+                        <dd>○○○○</dd>
+                        <dt>アピール
+                            <br>ポイント
+                        </dt>
+                        <dd>○○○○○○
+                            <br>○○○○○○
+                            <br>○○○○○○
+                            <br>○○○○○○
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="member_introduction">
+            <div class="container">
+
+                <h1>メンバー紹介</h1>
+                <div class="member_photo">
+                    <a href="member1.html">
+                        <img src="img/member2.png" alt="メンバー１">
+                    </a>
+                    <a href="member2.html">
+                        <img src="img/member3.png" alt="メンバー２">
+                    </a>
+                    <a href="member3.html">
+                        <img src="img/member4.png" alt="メンバー３">
+                    </a>
+                    <a href="member4.html">
+                        <img src="img/member5.png" alt="メンバー４">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copylobodan</p>
+
+    </footer>
+
+</body>
+
+</html>

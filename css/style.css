@@ -1,0 +1,373 @@
+/* #D9EDBF
+#FF9800
+#2C7865
+#90D26D */
+
+
+body {
+  color: #2C7865;
+  /* 文字の色の変更 */
+  /* font-weight: 600; */
+
+}
+
+a {
+  display: inline-block; /* 別紙参照 */
+  /* aタグはインライン要素（width/heightが使えない）ため
+  インラインブロック要素（width/heightが使える形）に変更する */
+
+  text-decoration: none;  /* https://codepen.io/lobodan/pen/ExJRaEp */
+  /* aタグの下線を消す */
+  color: #2C7865;
+  /* 文字の色の変更 */
+}
+
+li {
+  list-style: none;  /* https://codepen.io/lobodan/pen/vYMrEdq */
+  /* 数字の前につく「・」を消す*/
+
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;  /* https://codepen.io/lobodan/pen/GRLxbeb */
+  /* 画像と親要素の隙間をなくす */
+  object-fit: cover;  /* https://codepen.io/lobodan/pen/GRLGgGg */
+  /* 画像の縦横比をきれいに保つ */
+}
+
+.container {
+  width: 70%; /* https://codepen.io/lobodan/pen/ExJRade */
+  /* 横幅の調節：一つ上の親要素を100%としたときに何％にするか */
+  margin: 0 auto; /* https://codepen.io/lobodan/pen/ExJRade */
+  /* 箱自体を真ん中に持っていく */
+  padding: 0 3%; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 左右に余白をつける */
+  text-align: center; /* https://codepen.io/lobodan/pen/eYoMwQR */
+  /* 箱の中で文字を真ん中にする */
+}
+
+h1 {
+  font-size: 35px;
+  /* 文字の大きさ */
+  color: #FF9800;
+  /* 文字の色 */
+  font-weight: bold;
+  /* 文字の太さ bold:太い normal:普通の太さ lighter:細い */
+}
+
+/* header */
+header {
+  background: #D9EDBF;
+  /* 背景色 */
+}
+
+header .container {
+  display: flex;/* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf*/
+  /* 横並び */
+  justify-content: space-between;/* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 水平方向に左右は端、中は等間隔に配置する */
+  align-items: center;/* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf*/
+  /* 垂直方向に真ん中に配置する */
+  height: 100px;
+  /* 高さ */
+}
+
+.logo {
+  width: 190px;
+  /* 横幅の指定 */
+}
+
+header ul {
+  display: flex;/* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf*/
+  /* 横並び */
+}
+
+header li {
+  margin-left: 30px;/* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 左に余白を開ける */
+  transition: 0.5s;/* https://codepen.io/lobodan/pen/wvZXBww */
+}
+
+header li:hover {
+  /* :hover カーソルを当てた時の動作を記述するタグ */
+  transform: scale(1.2);/* https://codepen.io/lobodan/pen/wvZXBww */
+  /*
+  hover:カーソルを当てたら
+  scale:拡大
+  ()何倍にするか
+  カーソルを当てると 1.2倍に大きくなる
+  */
+}
+
+/* mainvisual */
+.mainvisual img {
+  width: 100%;
+  /* 横幅を画面いっぱいに広げる */
+  height: calc(100vh - 100px);  /* https://codepen.io/lobodan/pen/ExJRjMa */
+  /* 高さ calc=計算 100vh=PCの画面の高さ 50vhだとpcの画面半分の高さ
+  calc(100vh - 100px) = PCの画面の高さ - headerの高さ */
+  padding-bottom: 50px;/* https://codepen.io/lobodan/pen/BaErgqB */
+}
+
+/* self_introduction */
+#self_introduction {
+  padding: 50px 0;/* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上下に余白をつける */
+  background: #D9EDBF;
+  /* 背景色をつける */
+}
+
+.self_photo_text {
+  margin-top: 30px; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上に余白をつける */
+  display: flex; /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 横並びにする */
+  justify-content: center;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 水平方向に中央ぞろえ */
+  align-items: center;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 垂直方向に中央ぞろえ */
+}
+
+#self_introduction img {
+  max-width: 250px;
+  /* 最大の横幅 */
+  border-radius: 150px; /* https://codepen.io/lobodan/pen/ExJRjPM */
+  /* 角に丸みをつける */
+  margin-right: 50px;  /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 右に余白をつける */
+}
+
+
+#self_introduction dl {
+  display: flex;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 横並びにする */
+  flex-wrap: wrap;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 折り返す */
+  justify-content: space-between;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 左右は端っこ、中は等間隔に配置する */
+}
+
+#self_introduction dt {
+  width: 37%;
+  /* 横幅のdtとddの割合 */
+  /* dt:37% + dd:53% + dtとddの間の余白：10% = 100%*/
+  margin-bottom: 50px;  /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 下に余白をつける */
+  font-size: 17px;
+  /* 文字の大きさ */
+}
+
+#self_introduction dd {
+  width: 53%;
+  /* 横幅のdtとddの割合 */
+  /* dt:37% + dd:53% + dtとddの間の余白：10% = 100%*/
+}
+
+/* member_introduction */
+#member_introduction {
+  margin: 50px 0;  /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上下に余白をつける */
+}
+
+
+#member_introduction p {
+  font-size: 14px;
+  /* 文字の大きさ */
+}
+
+.member_photo {
+  display: flex;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 横並びにする */
+  justify-content: space-between;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  flex-wrap: wrap;  /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 折り返し */
+  margin-top: 50px;  /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上に余白をつける */
+}
+
+#member_introduction a {
+  width: 50%;
+  /* 横幅 */
+}
+
+#member_introduction img {
+  transition: 0.5s; /* https://codepen.io/lobodan/pen/wvZXBww */
+  /* カーソルを合わせたときの動きのスピード */
+  /* s:秒 0.5s=0.5秒 */
+  max-height: 500px;
+  /* 最大の高さ */
+  margin-bottom: 30px; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 下の余白 */
+}
+
+#member_introduction img:hover {
+  /* :hover カーソルを当てた時の動作を記述するタグ */
+  transform: scale(1.2); /* https://codepen.io/lobodan/pen/wvZXBww */
+  /*
+    hover:カーソルを当てたら
+    scale:拡大
+    ()何倍にするか
+    カーソルを当てると 1.2倍に大きくなる
+    */
+
+}
+
+/* footer */
+footer {
+  background: #D9EDBF;
+  /* 背景色 */
+}
+
+footer p {
+  text-align: center; /* https://codepen.io/lobodan/pen/eYoMwQR */
+  /* 文字を真ん中に寄せる */
+  font-size: 14px;
+  /* 文字の大きさ */
+  padding: 20px 0; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上下に余白をつける */
+}
+
+
+/* ------------------member-page --------------------*/
+.member {
+  width: 100%;
+  /* 横幅 */
+  height: 100vh;
+  /* 高さ */
+  background: #D9EDBF;
+  /* 背景色 */
+}
+
+.member img {
+  width: 400px;
+  /* 横幅 */
+  height: 400px;
+  /* 高さ */
+  border-radius: 50%; /* https://codepen.io/lobodan/pen/ExJRjPM */
+  /* 角に丸みをつける */
+  margin: 50px 0;  /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上下に余白をつける */
+}
+
+.member dl {
+  width: 60%; 
+  /* 横幅を設定 */
+  margin: 0 auto; /* https://codepen.io/lobodan/pen/ExJRade */
+  /* 箱自体を真ん中に持っていく */
+  display: flex; /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 横並び */
+  justify-content: space-between; /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 左右は端っこ、中は等間隔に配置する */
+  flex-wrap: wrap; /* 別紙参照 or https://gallery.mailchimp.com/4584d69207108736437a78101/files/753e8d00-08ba-4c22-bb91-8f0b14febe46/flexbox_cheatsheet.pdf */
+  /* 折り返す */
+}
+
+.member dt {
+  width: 25%;
+  /* dl dtと横幅の割合を調節 */
+  margin-top: 30px; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上に余白をつける */
+}
+
+.member dd {
+  width: 70%;
+  /* dl dtと横幅の割合を調節 */
+  margin-top: 30px; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上に余白をつける */
+}
+
+.return {
+  text-align: center; /* https://codepen.io/lobodan/pen/eYoMwQR */
+  /* 箱の中で文字を真ん中にする */
+
+}
+
+.return a {
+  background-color: white;
+  /* 背景色 */
+  margin-top: 100px; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上に余白をつける */
+  padding: 5px 100px; /* https://codepen.io/lobodan/pen/BaErgqB */
+  /* 上に余白をつける */
+  border-radius: 20px; /* https://codepen.io/lobodan/pen/ExJRjPM */
+  /* 角に丸みをつける */
+  transition: 0.5s; /* https://codepen.io/lobodan/pen/wvZXBww */
+  /* カーソルを合わせたときの動きのスピード */
+  /* s:秒 0.5s=0.5秒 */
+}
+
+.return a:hover {
+  /* :hover カーソルを当てた時の動作を記述するタグ */
+  transform: scale(1.2); /* https://codepen.io/lobodan/pen/wvZXBww */
+  /*
+    hover:カーソルを当てたら
+    scale:拡大
+    ()何倍にするか
+    カーソルを当てると 1.2倍に大きくなる
+    */
+}
+
+@media (max-width: 600px) {
+
+  /* self_introduction */
+  .self_photo_text {
+    flex-direction: column;
+    /* 縦並びにする */
+    align-items: center;
+    /* 縦並びになるとjustify-contentとflex-directionが反対になる
+    justify-content:center：垂直方向に中央ぞろえ
+    align-items:center :水平方向に中央ぞろえ */
+  }
+
+  #self_introduction img {
+    margin-bottom: 50px; /* https://codepen.io/lobodan/pen/BaErgqB */
+    /* 下に余白をつける */
+  }
+
+  #self_introduction dt {
+    margin-bottom: 10px; /* https://codepen.io/lobodan/pen/BaErgqB */
+    /* 下に余白をつける */
+    font-size: 17px;
+    /* 文字の大きさ */
+  }
+
+
+
+  /* member_introduction */
+
+  .member_photo {
+    flex-direction: column;
+     /* 縦並びにする */
+    align-items: center;
+    /* 縦並びになるとjustify-contentとflex-directionが反対になる
+    justify-content:center：垂直方向に中央ぞろえ
+    align-items:center :水平方向に中央ぞろえ */
+  }
+
+
+
+  /* footer */
+  footer p {
+    text-align: center; /* https://codepen.io/lobodan/pen/eYoMwQR */
+    /* 箱の中で文字を真ん中にする */
+    font-size: 14px;
+    /* 文字の大きさ */
+    margin-top: 50px; /* https://codepen.io/lobodan/pen/BaErgqB */
+    /* 上に余白をつける */
+  }
+
+  /* member */
+
+  .member img {
+    width: 200px;
+    /* 横幅 */
+    height: 200px;
+    /* 高さ */
+  }
+
+  .member dl {
+    width: 100%;
+    /* 横幅 */
+  }
+}
